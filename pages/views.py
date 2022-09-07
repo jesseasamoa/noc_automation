@@ -5,7 +5,7 @@ from django.utils.decorators import method_decorator
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
-
+import call_api
 # Create your views here.
 
 
@@ -38,6 +38,13 @@ def logout_page(request):
 
 class Dashboard(LoginRequiredMixin, TemplateView):
     template_name = 'dashboard.html'
+
+    print(call_api.api_call('reports/types', {}))
+
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     context = ''
+    #     return context
 
 
 
