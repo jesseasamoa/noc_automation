@@ -1,3 +1,4 @@
+# imports necessary to build dashboard application
 from django.shortcuts import render, redirect
 from django.views.generic import ListView, TemplateView
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
@@ -11,6 +12,9 @@ import json
 
 
 class Login(TemplateView):
+    """
+    Login class to authenticate admin users
+    """
     template_name = 'login.html'
 
     @method_decorator(csrf_protect)
@@ -38,14 +42,18 @@ def logout_page(request):
 
 
 class Dashboard(LoginRequiredMixin, TemplateView):
+    """
+    Generating context data to render as dashboard consumable data
+    """
     template_name = 'dashboard.html'
+    header_response = []
 
     api_data = call_api.api_call('reports/types', {})
-    network_report = {'api_data': api_data}
+    header_response.append(api_data)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context = self.network_report
+        context = self.header_response
         return context
 
 
