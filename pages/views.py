@@ -46,14 +46,14 @@ class Dashboard(LoginRequiredMixin, TemplateView):
     Generating context data to render as dashboard consumable data
     """
     template_name = 'dashboard.html'
-    header_response = []
 
-    api_data = call_api.api_call('reports/types', {})
-    header_response.append(api_data)
+    api_data = call_api.api_call('reports/subscribed', {})
+    jsonResponse = json.loads(api_data.decode('utf-8'))
+    # json_context = {'jsonResponse': jsonResponse}
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context = self.header_response
+        context['headers'] = self.jsonResponse
         return context
 
 

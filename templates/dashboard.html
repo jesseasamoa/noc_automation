@@ -56,6 +56,105 @@
 
                 <!-- Dashboard content -->
                 <div class="content__wrap order-2 min-w-0">
+                    <!-- Users Table -->
+                            <div class="table-responsive mw-100">
+                                <table class="table align-middle">
+                                    <thead>
+                                        <tr>
+                                            {% for header in headers %}
+                                            <th>{{header}}</th>
+<!--                                            <th>User</th>-->
+<!--                                            <th>Full Name</th>-->
+<!--                                            <th>Email</th>-->
+<!--                                            <th class="text-center">Subscription</th>-->
+<!--                                            <th class="text-center">Actions</th>-->
+                                            {% endfor %}
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="min-w-td">1</td>
+                                            <td><img class="img-sm rounded-circle" src="{% static '/img/profile-photos/1.png" alt="Profile Picture' %}"></td>
+                                            <td><a class="btn-link text-info" href="#">John Doe</a></td>
+                                            <td class="text-muted">john.doe@example.com</td>
+                                            <td class="fs-5"><span class="d-block badge bg-info">Trial</span></td>
+                                            <td class="text-center text-nowrap">
+                                                <a class="btn btn-icon btn-sm btn-primary btn-hover" href="#"><i class="demo-pli-pen-5 fs-5"></i></a>
+                                                <a class="btn btn-icon btn-sm btn-danger btn-hover" href="#"><i class="demo-pli-trash fs-5"></i></a>
+                                                <a class="btn btn-icon btn-sm btn-primary btn-hover" href="#"><i class="demo-pli-unlock fs-5"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="min-w-td">2</td>
+                                            <td><img class="img-sm rounded-circle" src="{% static '/img/profile-photos/2.png" alt="Profile Picture"></td>
+                                            <td><a class="btn-link text-info" href="#">Charles S Boyle</a></td>
+                                            <td class="text-muted">char_boy90@example.com</td>
+                                            <td class="fs-5"><span class="d-block badge bg-success">Free</span></td>
+                                            <td class="text-center text-nowrap">
+                                                <a class="btn btn-icon btn-sm btn-primary btn-hover" href="#"><i class="demo-pli-pen-5 fs-5"></i></a>
+                                                <a class="btn btn-icon btn-sm btn-danger btn-hover" href="#"><i class="demo-pli-trash fs-5"></i></a>
+                                                <a class="btn btn-icon btn-sm btn-primary btn-hover" href="#"><i class="demo-pli-unlock fs-5"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="min-w-td">3</td>
+                                            <td><img class="img-sm rounded-circle" src="{% static '/img/profile-photos/3.png" alt="Profile Picture"></td>
+                                            <td><a class="btn-link text-info" href="#">Scott S. Calabrese</a></td>
+                                            <td class="text-muted">scot.em23@example.com</td>
+                                            <td class="fs-5"><span class="d-block badge bg-purple">Bussiness</span></td>
+                                            <td class="text-center text-nowrap">
+                                                <a class="btn btn-icon btn-sm btn-primary btn-hover" href="#"><i class="demo-pli-pen-5 fs-5"></i></a>
+                                                <a class="btn btn-icon btn-sm btn-danger btn-hover" href="#"><i class="demo-pli-trash fs-5"></i></a>
+                                                <a class="btn btn-icon btn-sm btn-primary btn-hover" href="#"><i class="demo-pli-unlock fs-5"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="min-w-td">4</td>
+                                            <td><img class="img-sm rounded-circle" src="{% static '/img/profile-photos/4.png" alt="Profile Picture"></td>
+                                            <td><a class="btn-link text-info" href="#">Lucy Moon</a></td>
+                                            <td class="text-muted">just_lucy.doe@example.com</td>
+                                            <td class="fs-5"><span class="d-block badge bg-secondary">Personal</span></td>
+                                            <td class="text-center text-nowrap">
+                                                <a class="btn btn-icon btn-sm btn-primary btn-hover" href="#"><i class="demo-pli-pen-5 fs-5"></i></a>
+                                                <a class="btn btn-icon btn-sm btn-danger btn-hover" href="#"><i class="demo-pli-trash fs-5"></i></a>
+                                                <a class="btn btn-icon btn-sm btn-primary btn-hover" href="#"><i class="demo-pli-unlock fs-5"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="min-w-td">5</td>
+                                            <td><img class="img-sm rounded-circle" src="{% static '/img/profile-photos/6.png" alt="Profile Picture"></td>
+                                            <td><a class="btn-link text-info" href="#">Maria Marz</a></td>
+                                            <td class="text-muted">maria_545@example.com</td>
+                                            <td class="fs-5"><span class="d-block badge bg-info">Trial</span></td>
+                                            <td class="text-center text-nowrap">
+                                                <a class="btn btn-icon btn-sm btn-primary btn-hover" href="#"><i class="demo-pli-pen-5 fs-5"></i></a>
+                                                <a class="btn btn-icon btn-sm btn-danger btn-hover" href="#"><i class="demo-pli-trash fs-5"></i></a>
+                                                <a class="btn btn-icon btn-sm btn-primary btn-hover" href="#"><i class="demo-pli-unlock fs-5"></i></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <!--Pagination-->
+                                <nav class="text-align-center mt-5" aria-label="Table navigation">
+                                    <ul class="pagination justify-content-center">
+                                        <li class="page-item disabled">
+<!--                                            <a class="page-link">Previous</a>-->
+                                        </li>
+                                        <li class="page-item active" aria-current="page">
+                                            <span class="page-link">1</span>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item disabled"><a class="page-link" href="#">...</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">Next</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <!-- END : Users Table -->
                     <div class="row mb-4 mb-md-5">
                         <div class="col-xl-5">
 
@@ -146,18 +245,20 @@
 
                             <!-- Users Table -->
                             <div class="table-responsive mw-100">
-                                <table class="table align-middle">
-                                    <thead>
-                                        <tr>
-<!--                                            <th>#</th>-->
-<!--                                            <th>User</th>-->
-<!--                                            <th>Full Name</th>-->
-<!--                                            <th>Email</th>-->
-<!--                                            <th class="text-center">Subscription</th>-->
-<!--                                            <th class="text-center">Actions</th>-->
-                                        </tr>
-                                    </thead>
-                                    <tbody>
+<!--                                <table class="table align-middle">-->
+<!--                                    <thead>-->
+<!--                                        <tr>-->
+<!--                                            {% for header in headers %}-->
+<!--                                            <th>{{header}}</th>-->
+<!--&lt;!&ndash;                                            <th>User</th>&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <th>Full Name</th>&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <th>Email</th>&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <th class="text-center">Subscription</th>&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <th class="text-center">Actions</th>&ndash;&gt;-->
+<!--                                            {% endfor %}-->
+<!--                                        </tr>-->
+<!--                                    </thead>-->
+<!--                                    <tbody>-->
 <!--                                        <tr>-->
 <!--                                            <td class="min-w-td">1</td>-->
 <!--                                            <td><img class="img-sm rounded-circle" src="{% static '/img/profile-photos/1.png" alt="Profile Picture' %}"></td>-->
@@ -218,15 +319,15 @@
 <!--                                                <a class="btn btn-icon btn-sm btn-primary btn-hover" href="#"><i class="demo-pli-unlock fs-5"></i></a>-->
 <!--                                            </td>-->
 <!--                                        </tr>-->
-                                    </tbody>
-                                </table>
+<!--                                    </tbody>-->
+<!--                                </table>-->
 
                                 <!--Pagination-->
                                 <nav class="text-align-center mt-5" aria-label="Table navigation">
-                                    <ul class="pagination justify-content-center">
-                                        <li class="page-item disabled">
-<!--                                            <a class="page-link">Previous</a>-->
-                                        </li>
+<!--                                    <ul class="pagination justify-content-center">-->
+<!--                                        <li class="page-item disabled">-->
+<!--&lt;!&ndash;                                            <a class="page-link">Previous</a>&ndash;&gt;-->
+<!--                                        </li>-->
 <!--                                        <li class="page-item active" aria-current="page">-->
 <!--                                            <span class="page-link">1</span>-->
 <!--                                        </li>-->
@@ -237,7 +338,7 @@
 <!--                                        <li class="page-item">-->
 <!--                                            <a class="page-link" href="#">Next</a>-->
 <!--                                        </li>-->
-                                    </ul>
+<!--                                    </ul>-->
                                 </nav>
                             </div>
                             <!-- END : Users Table -->
@@ -250,7 +351,7 @@
                 <!-- Content sidebar -->
                 <aside class="w-md-250px content__wrap flex-shrink-0 pe-md-0 order-1">
 
-                    <!-- Earning and promotion info -->
+<!--                     Earning and promotion info-->
 <!--                    <h5 class="mb-0">Total Earning</h5>-->
 <!--                    <p>August 17, 2028</p>-->
 <!--                    <p class="h1">$935.09</p>-->
@@ -261,11 +362,11 @@
 
 <!--                    <h5 class="mt-5 mb-3">Available Items</h5>-->
 <!--                    <p>Get <span class="badge bg-danger">$15.00 off</span> your next bill by making sure your full payment reaches us before August 5th.</p>-->
-                    <!-- End - Earning and promotion info -->
+<!--                     End - Earning and promotion info-->
 
-                    <!-- Additional actions nav -->
+<!--                     Additional actions nav-->
 <!--                    <h5 class="mt-5">Additional Actions</h5>-->
-<!--                    <div class="row list-group list-group-borderless gx-5 px-2">-->
+                    <div class="row list-group list-group-borderless gx-5 px-2">
 <!--                        <a href="#" class="list-group-item list-group-item-action">-->
 <!--                            <i class="demo-pli-information me-2 fs-5"></i>-->
 <!--                            Services Information-->
@@ -282,10 +383,10 @@
 <!--                            <i class="demo-pli-support me-2 fs-5"></i>-->
 <!--                            Messages Center-->
 <!--                        </a>-->
-<!--                    </div>-->
-                    <!-- End - Additional actions nav -->
+                    </div>
+<!--                     End - Additional actions nav-->
 
-                    <!-- Public Settings -->
+<!--                     Public Settings-->
 <!--                    <h5 class="mt-5">Public Settings</h5>-->
 <!--                    <div class="list-group list-group-borderless">-->
 <!--                        <div class="list-group-item d-flex justify-content-between mb-1 px-0">-->
