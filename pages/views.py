@@ -47,7 +47,7 @@ class Dashboard(LoginRequiredMixin, TemplateView):
     """
     template_name = 'dashboard.html'
 
-    api_data = call_api.api_call('reports/subscribed', {})
+    api_data = call_api.api_call('reports/types', {})
     jsonResponse = json.loads(api_data.decode('utf-8'))
     # json_context = {'jsonResponse': jsonResponse}
 
