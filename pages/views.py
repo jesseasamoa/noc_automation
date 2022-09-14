@@ -6,6 +6,7 @@ from django.utils.decorators import method_decorator
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
+
 import call_api
 import json
 # Create your views here.
@@ -55,6 +56,10 @@ class Dashboard(LoginRequiredMixin, TemplateView):
         context = super().get_context_data(**kwargs)
         context['headers'] = self.jsonResponse
         return context
+
+
+class ChartjsTest(TemplateView):
+    template_name = 'chartjs_test.html'
 
 
 

@@ -16,11 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from pages import views
-from pages.views import Login, Dashboard
+from pages.views import Login, Dashboard, ChartjsTest
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', Login.as_view(), name='login'),
     path('dashboard', Dashboard.as_view(), name='dashboard'),
     path('logout', views.logout_page, name='logout'),
+    path('chartjs_test', ChartjsTest.as_view(), name='chartjs_test'),
 ]
