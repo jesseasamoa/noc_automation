@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
 
-report-manager.py : Shadowserver Foundation Report Utility
+report_manager.py : Shadowserver Foundation Report Utility
 
-Usage: report-manager.py /path/to/config.ini [ days ]
+Usage: report_manager.py /path/to/config.ini [ days ]
 
 The optional 'days' argument is the number of previous days to download reports for.  The
 default is 2.
@@ -67,7 +67,7 @@ The notification entry is a JSON object that contains a timestamp, report date, 
 
 Example crontab to check for new reports once per hour:
 
-    15 * * * * /opt/shadowserver/report-manager.py /opt/shadowserver/reports.ini
+    15 * * * * /opt/shadowserver/report_manager.py /opt/shadowserver/reports.ini
 
 """
 
@@ -81,6 +81,7 @@ import shutil
 from datetime import datetime, timedelta, timezone
 from urllib.request import urlretrieve, urljoin, pathname2url
 api = importlib.import_module('call-api')
+
 
 class StompNotifier:
     """Notification class for the STOMP protocol. """
