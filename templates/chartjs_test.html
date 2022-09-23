@@ -29,12 +29,17 @@
 
   <script>
   const labels = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
+    'Cassava',
+    'Yam',
+    'Plantain',
+    'Cocoyam',
+    'Maize',
+    'Sorghum',
+    'Millet',
+    'Rice',
+    'Vegetables',
+    'Soybean',
+    'Oil Palm',
   ];
 
   const data = {
@@ -43,12 +48,13 @@
       label: 'My First dataset',
       backgroundColor: 'rgb(255, 99, 132)',
       borderColor: 'rgb(255, 99, 132)',
-      data: [0, 10, 5, 2, 20, 30, 45],
+      data: [846772, 361273, 317572, 233946, 899767, 261262, 181153,
+      151354, 45833, 26200, 50000],
     }]
   };
 
   const config = {
-    type: 'line',
+    type: 'bar',
     data: data,
     options: {}
   };
