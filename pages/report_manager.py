@@ -98,6 +98,7 @@ class StompNotifier:
     def notify(self, message):
         self.stomp.send(destination=self.queue, body=message)
 
+
 class RedisNotifier:
     """Notification class for Redis."""
     def __init__(self, settings):
@@ -112,6 +113,7 @@ class RedisNotifier:
     def notify(self, message):
         self.redis.rpush(self.queue, message)
 
+
 class KafkaNotifier:
     """Notification class for Kafka."""
     def __init__(self, settings):
@@ -122,6 +124,7 @@ class KafkaNotifier:
 
     def notify(self, message):
         self.kafka.send(self.queue, bytes(message, 'utf-8'))
+
 
 class ReportManager:
     """Report manager implementation."""
@@ -251,6 +254,7 @@ class ReportManager:
                 die("Exception: insufficient disk space")
             self._download(report, directory)
 
+
 def die(message):
     """Log and exit with a message."
 
@@ -262,6 +266,7 @@ def die(message):
     """
     syslog.syslog(message)
     sys.exit(message)
+
 
 def mkdir(path):
     """Create a directory if it does not already exist. Dies on failure.

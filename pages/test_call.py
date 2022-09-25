@@ -10,6 +10,3 @@ for key, value in file_data.items():
         csv_file = value
         print(csv_file)
 
-# with open(csv_file, 'r') as f:
-#     csv_reader = csv.reader(f)
-#     print(csv_reader)
