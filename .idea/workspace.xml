@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1404b7f5-1cca-4117-8d84-747396fd8651" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/report_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/report_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/test_call.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/test_call.py" afterDir="false" />
-    </list>
+    <list default="true" id="1404b7f5-1cca-4117-8d84-747396fd8651" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,7 +38,7 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/jesse/Projects/data",
+    "last_opened_file_path": "/home/jesse/Projects/dashboard_projects/1_emailscrapers",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
